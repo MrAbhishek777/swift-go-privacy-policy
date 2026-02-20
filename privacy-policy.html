@@ -30,6 +30,11 @@
             margin-top: 30px;
             margin-bottom: 15px;
         }
+        h3 {
+            color: #2e7d32;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
         .last-updated {
             color: #666;
             font-style: italic;
@@ -70,6 +75,13 @@
             padding: 15px;
             margin: 20px 0;
         }
+        .tech-box {
+            background-color: #f3f8ff;
+            border-left: 4px solid #1976d2;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
         ul {
             margin-left: 20px;
             color: #333;
@@ -78,504 +90,391 @@
             margin-bottom: 10px;
             text-align: justify;
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        td {
+            padding: 8px 10px;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+        }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: monospace;
+            font-size: 0.9em;
+            color: #c62828;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Privacy Policy – Swift Go Browser</h1>
-        <p class="last-updated">Last Updated: February 14, 2026</p>
-        
+        <p class="last-updated">Last Updated: February 20, 2026</p>
+
         <div class="info-box">
             <p><strong>Display Name:</strong> Swift Go</p>
         </div>
 
+        <!-- ═══════════════════════════════════════════════════════════ -->
         <h2>1. Introduction</h2>
-        <p>Welcome to Swift Go - Fast & Private Browser, a fast and secure mobile browser application designed to provide you with an excellent web browsing experience. This Privacy Policy explains in detail how we collect, use, store, and protect your information when you use our browser application. We are committed to transparency and protecting your privacy. By using Swift Go Browser, you agree to the collection and use of information in accordance with this policy. We encourage you to read this policy carefully to understand our practices regarding your personal data and how we will treat it. If you do not agree with our policies and practices, please do not use our application. This policy may change from time to time, and your continued use of the app after we make changes is deemed to be acceptance of those changes.</p>
+        <p>Welcome to <strong>Swift Go – Fast &amp; Private Browser</strong>, a fast, secure, and feature-rich mobile browser application designed to provide you with an excellent web browsing experience. This Privacy Policy explains in detail how we collect, use, store, and protect your information when you use our browser application. We are committed to transparency and protecting your privacy. By using Swift Go Browser, you agree to the collection and use of information in accordance with this policy.</p>
+        <p>We encourage you to read this policy carefully to understand our practices regarding your personal data and how we will treat it. If you do not agree with our policies and practices, please do not use our application. This policy may change from time to time, and your continued use of the app after we make changes is deemed to be acceptance of those changes. The most current version of this policy is always available from within the app under Settings &gt; Privacy Policy.</p>
 
-        <h2>2. Browser Functionality & Web Navigation</h2>
-        <p>Swift Go Browser is a full-featured web browser that allows you to access and navigate websites across the internet. The browser uses WebView technology (specifically flutter_inappwebview) to render web pages with full JavaScript support, media playback capabilities, and modern web standards compliance. When you browse websites, the app loads and displays web content just like any standard browser. The browser supports multiple tabs, allowing you to have several web pages open simultaneously. It includes a smart address bar that accepts both URLs and search queries, automatically detecting whether you've entered a website address or a search term. The browser maintains a navigation history for each tab, enabling you to go back and forward through previously visited pages. We support both HTTP and HTTPS protocols, with visual indicators to show you when you're on a secure connection. The browser can handle various web technologies including forms, cookies, local storage, and multimedia content. We also support deep linking, allowing you to open web links from other applications directly in Swift Go Browser. The browser is optimized for performance with hardware acceleration enabled for smooth scrolling and fast page rendering.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>2. Browser Functionality &amp; Web Navigation</h2>
+        <p>Swift Go Browser is a full-featured web browser that allows you to access and navigate websites across the internet. The browser uses WebView technology (specifically <strong>flutter_inappwebview</strong>) to render web pages with full JavaScript support, media playback capabilities, and modern web standards compliance. When you browse websites, the app loads and displays web content just like any standard browser.</p>
+        <p>The browser supports <strong>multiple tabs</strong>, allowing you to have several web pages open simultaneously. It includes a smart address bar that accepts both URLs and search queries, automatically detecting whether you have entered a website address or a search term using our Chrome-like smart URL detection system. The browser maintains a navigation history for each tab, enabling you to go back and forward through previously visited pages.</p>
+        <p>We support both HTTP and HTTPS protocols with visual security indicators. The browser can handle forms, cookies, local storage, and multimedia content. We also support <strong>deep linking</strong>, allowing you to open web links from other applications directly in Swift Go Browser. The browser is optimized for performance with hardware acceleration enabled for smooth scrolling and fast page rendering. Additionally, the browser includes a <strong>Desktop Mode</strong> toggle that changes the user-agent string to request the full desktop version of any website, giving you access to features typically available only on computers.</p>
 
-        <h2>3. Permissions System & Runtime Requests</h2>
-        <p>Swift Go Browser implements a privacy-focused permission system that requests access to device features only when they are actually needed by a website or app feature. We NEVER request permissions at app startup or installation. All permissions are requested at runtime when a specific feature requires them. Here's how each permission works:</p>
-        
-        <p><strong>Internet Permission (INTERNET):</strong> This permission is automatically granted and allows the app to access the internet for browsing websites. This is essential for browser functionality and does not require user approval.</p>
-        
-        <p><strong>Storage Permissions (READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE):</strong> These permissions are requested only when you initiate a download or when a website needs to access files. On Android 11 and above, we use scoped storage which provides better privacy protection. We never access your files without your explicit action.</p>
-        
-        <p><strong>Camera Permission:</strong> Requested only when a website asks to use your camera (e.g., for video calls, taking photos on web apps). You'll see a permission dialog explaining why the camera is needed before any access is granted.</p>
-        
-        <p><strong>Microphone Permission:</strong> Requested only when a website needs audio input (e.g., voice calls, voice search on websites). The permission dialog clearly states which feature needs microphone access.</p>
-        
-        <p><strong>Location Permission (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> Requested only when a website asks for your location (e.g., maps, weather services). You have full control to allow or deny location access, and you can revoke it anytime from Android settings.</p>
-        
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>3. Permissions System &amp; Runtime Requests</h2>
+        <p>Swift Go Browser implements a privacy-focused permission system that requests access to device features only when they are actually needed by a website or app feature. We <strong>NEVER</strong> request permissions at app startup or installation. All permissions are requested at runtime when a specific feature requires them.</p>
+
+        <p><strong>Internet Permission (INTERNET):</strong> Automatically granted. Allows the app to access the internet for browsing websites, fetching news, and downloading files. This is essential for all browser functionality.</p>
+        <p><strong>Storage Permissions (READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE):</strong> Requested only when you initiate a download or when the media player needs to access a downloaded file. On Android 11 and above, we use scoped storage which provides better privacy protection. We never access your files without your explicit action.</p>
+        <p><strong>Camera Permission:</strong> Requested only when a website asks to use your camera (e.g., for video calls or taking photos on web apps). You will see a permission dialog before any access is granted.</p>
+        <p><strong>Microphone Permission:</strong> Requested in two cases — (1) when a website needs audio input such as voice calls or voice-based web apps, and (2) when you activate the <strong>Voice Search</strong> feature from the search bar to dictate search queries. The permission dialog clearly states which feature needs microphone access.</p>
+        <p><strong>Location Permission (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</strong> Requested only when a website asks for your geographic location (e.g., maps or weather services). You have full control to allow or deny location access, and you can revoke it anytime from Android settings.</p>
         <p><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, this permission is NEVER automatically requested by our app. Notifications are only shown if you manually enable them from Android system settings. We respect your choice to keep notifications disabled.</p>
-        
-        <p><strong>Phone Permission:</strong> Requested only when a website needs to make phone calls or access phone state. This is rare and only happens with specific web applications.</p>
-        
-        <p>All permission requests include a clear explanation of why the permission is needed and which feature requires it. You can deny any permission, and the app will continue to work, though the specific feature requiring that permission may not function. You can review and change all permissions anytime from your device's Settings > Apps > Swift Go Browser > Permissions.</p>
+        <p><strong>Phone Permission:</strong> Requested only when a website needs to make phone calls via a <code>tel:</code> URI link. This is rare and only happens with specific web applications.</p>
+        <p>All permission requests include a clear explanation of why the permission is needed. You can deny any permission and the app will continue to work, though the specific feature requiring that permission may not function. You can review and change all permissions anytime from <em>Settings &gt; Apps &gt; Swift Go Browser &gt; Permissions</em>.</p>
 
-        <h2>4. Security System & HTTPS Detection</h2>
-        <p>Swift Go Browser includes a comprehensive security system designed to protect you while browsing. The browser actively monitors the security status of every website you visit and provides clear visual indicators about connection security. When you visit a website, our security system checks whether the connection uses HTTPS (secure) or HTTP (unsecure) protocol. For HTTPS websites, you'll see a lock icon or secure indicator in the address bar, confirming that your connection is encrypted and protected from eavesdropping. For HTTP websites, you'll see a warning indicator showing that the connection is not secure, and any data you enter could potentially be intercepted.</p>
-        
-        <p>Our security system also handles SSL/TLS certificates, validating that websites are who they claim to be. While we do allow users to proceed to websites with certificate issues (to maintain browsing flexibility), we clearly warn you about potential security risks. The browser supports modern encryption standards and automatically upgrades connections to HTTPS when available. We also implement protection against mixed content, warning you when a secure page tries to load insecure resources.</p>
-        
-        <p>Additionally, our security system includes protection against malicious downloads and suspicious file types. When you attempt to download files, the system checks file extensions and warns you about potentially dangerous file types like APK files or executables. The browser maintains a secure sandbox environment, isolating web content from your device's core system to prevent malicious websites from accessing sensitive device features without permission. We regularly update our security protocols to protect against emerging threats and vulnerabilities.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>4. Security System &amp; HTTPS Detection</h2>
+        <p>Swift Go Browser includes a comprehensive security system designed to protect you while browsing. The browser actively monitors the security status of every website you visit and provides clear visual indicators about connection security. When you visit a website, our security system checks whether the connection uses HTTPS (secure) or HTTP (unsecure) protocol.</p>
+        <p>For HTTPS websites, you will see a <strong>lock icon</strong> in the address bar confirming that your connection is encrypted. For HTTP websites, you will see a <strong>warning indicator</strong> showing the connection is not secure. Our security system also validates SSL/TLS certificates. While we do allow users to proceed to websites with certificate issues to maintain browsing flexibility, we clearly warn you about potential security risks.</p>
+        <p><strong>Cleartext Traffic Support:</strong> Swift Go Browser allows HTTP (non-encrypted) connections for compatibility with websites that do not support HTTPS. This means some websites may load using unencrypted connections. When accessing HTTP websites, the browser clearly displays a security warning indicator. We strongly recommend users avoid entering sensitive information on HTTP websites.</p>
+        <p>Additionally, our security system includes protection against malicious downloads and suspicious file types. When you attempt to download files, the system checks file extensions and warns you about potentially dangerous file types (such as APK executables). The browser maintains a <strong>secure sandbox environment</strong>, isolating web content from your device's core system to prevent malicious websites from accessing sensitive device features without permission. We also implement a <strong>Find in Page</strong> feature that searches text on-screen within the current web page entirely offline without sending any data externally.</p>
 
+        <!-- ═══════════════════════════════════════════════════════════ -->
         <h2>5. Advertisement System (AdMob Integration)</h2>
-        <p>Swift Go Browser uses Google AdMob to display advertisements, which helps us keep the app free for all users. We have implemented a carefully designed ad system that balances revenue generation with user experience. Our ad system is configured to show ads only at specific, non-intrusive moments during your app usage. Here's exactly when and how ads are displayed:</p>
-        
-        <p><strong>App Open Ads:</strong> When you launch the Swift Go Browser app (not every time, but periodically), you may see a full-screen ad. This ad appears only when you first open the app from a closed state, never when switching back from another app. The ad loads in the background and displays quickly without disrupting your browsing experience.</p>
-        
-        <p><strong>Download Complete Ads:</strong> When a file download completes successfully, an interstitial ad may be shown. This happens only after the download is 100% complete, ensuring the ad doesn't interfere with the download process. The ad is shown once per completed download.</p>
-        
+        <p>Swift Go Browser uses <strong>Google AdMob</strong> to display advertisements, which helps us keep the app free for all users. Our ad system is configured to show ads only at specific, non-intrusive moments during your app usage. Here is exactly when and how ads are displayed:</p>
+        <p><strong>App Open Ads:</strong> When you launch Swift Go Browser from a closed state (not when switching back from another app), you may periodically see a full-screen ad. The ad loads in the background and displays without disrupting your browsing experience.</p>
+        <p><strong>Download Complete Ads:</strong> When a file download completes successfully, an interstitial ad may be shown. This happens only after the download is 100% complete and is shown once per completed download.</p>
         <p><strong>Clear All Tabs Ads:</strong> When you use the "Clear All Tabs" feature to close all your open browser tabs at once, an interstitial ad may be displayed. This happens only when you explicitly clear all tabs, not when closing individual tabs.</p>
-        
-        <p><strong>No Ads During Browsing:</strong> We specifically do NOT show ads while you're actively browsing websites, reading content, or navigating between pages. Your browsing experience remains uninterrupted.</p>
-        
-        <p><strong>AdMob Data Collection:</strong> Google AdMob may collect certain information to serve personalized ads, including your advertising ID, device information, IP address, and app usage patterns. This data is collected and processed by Google according to their privacy policy. You can opt out of personalized ads by adjusting your device's ad settings (Settings > Google > Ads > Opt out of Ads Personalization). Even if you opt out, you'll still see ads, but they won't be personalized based on your interests.</p>
-        
-        <p><strong>Ad Unit IDs:</strong> We use three specific ad units: App Open Ad (ca-app-pub-8523933423167815/3079064528), Download Complete Ad (ca-app-pub-8523933423167815/4616331883), and Clear Tabs Ad (ca-app-pub-8523933423167815/9452901184). These are managed through our AdMob account and comply with Google's advertising policies.</p>
+        <p><strong>No Ads During Browsing:</strong> We specifically do NOT show ads while you are actively browsing websites, reading news, using the media player, using voice search, or navigating between pages. Your browsing experience remains completely uninterrupted.</p>
+        <p><strong>AdMob Data Collection:</strong> Google AdMob may collect certain information to serve personalized ads, including your advertising ID, device information, IP address, and app usage patterns. This data is collected and processed by Google according to their privacy policy. You can opt out of personalized ads by adjusting your device's ad settings (<em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads Personalization</em>). Even if you opt out, you will still see non-personalized ads.</p>
+        <p><strong>Ad Unit IDs:</strong> We use three specific ad units: App Open Ad (<code>ca-app-pub-8523933423167815/3079064528</code>), Download Complete Ad (<code>ca-app-pub-8523933423167815/4616331883</code>), and Clear Tabs Ad (<code>ca-app-pub-8523933423167815/9452901184</code>). These comply with Google's advertising policies.</p>
 
-        <h2>6. Download System & File Management</h2>
-        <p>Swift Go Browser includes a powerful download manager that allows you to download files from websites directly to your device. The download system is built using flutter_downloader library and provides comprehensive download management capabilities. Here's how the download system works and what permissions it requires:</p>
-        
-        <p>When you click a download link or a file on a website, the browser automatically detects common file types (including MP4, MP3, PDF, ZIP, JPG, PNG, APK, DOC, XLS, PPT, and many others) and initiates the download process. Before starting any download, the app requests storage permission if not already granted. On Android 11 and above, we use scoped storage which means we only access the Downloads folder, not your entire device storage.</p>
-        
-        <p>The download manager provides real-time progress tracking, showing you the download speed, percentage completed, and estimated time remaining. All downloads run in the background, allowing you to continue browsing while files download. You can pause, resume, or cancel downloads at any time from the downloads screen. The system supports multiple simultaneous downloads, managing them efficiently to optimize your device's resources.</p>
-        
-        <p>Each download is assigned a unique notification that shows progress in your notification panel. When a download completes, you receive a completion notification with options to open the file or view it in your file manager. Failed downloads are clearly marked with error messages, and you can retry them with a single tap. The download history is maintained within the app, showing all completed, failed, and cancelled downloads.</p>
-        
-        <p>Downloaded files are stored in your device's standard Downloads folder (typically /storage/emulated/0/Download/) with proper file naming to prevent conflicts. We use Android's FileProvider system to securely share downloaded files with other apps when you choose to open them. The download system respects your device's storage limits and will notify you if there's insufficient space before starting a download.</p>
-        
-        <p><strong>Permissions Used:</strong> READ_EXTERNAL_STORAGE (to check existing files), WRITE_EXTERNAL_STORAGE (to save downloaded files on Android 10 and below), DOWNLOAD_WITHOUT_NOTIFICATION (to manage downloads), and INTERNET (to download files from the web).</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>6. Download System &amp; File Management</h2>
+        <p>Swift Go Browser includes a powerful download manager built using the <strong>flutter_downloader</strong> library. When you click a download link on a website, the browser automatically detects common file types (including MP4, MP3, PDF, ZIP, JPG, PNG, APK, DOC, XLS, PPT, and many others) and initiates the download process. Before starting any download, the app requests storage permission if not already granted. On Android 11+, we use scoped storage which means we only access the Downloads folder, not your entire device storage.</p>
+        <p>The download manager provides real-time progress tracking showing download speed, percentage completed, and estimated time remaining. All downloads run in the background, allowing you to continue browsing while files download. You can pause, resume, or cancel downloads at any time from the Downloads screen. The system supports multiple simultaneous downloads.</p>
+        <p>Each download is assigned a notification that shows progress. When a download completes, you receive a completion notification with a checkmark (✓) icon and options to open the file or view it in your file manager. Failed downloads show error notifications with options to retry. Downloaded files are stored in your device's standard Downloads folder (<code>/storage/emulated/0/Download/</code>) and are securely shared with other apps using Android's FileProvider system when you choose to open them.</p>
+        <p><strong>Permissions Used:</strong> READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE (Android ≤10), DOWNLOAD_WITHOUT_NOTIFICATION, and INTERNET.</p>
 
-        <h2>7. Notification System</h2>
-        <p>Swift Go Browser implements a comprehensive notification system to keep you informed about important events and download progress. Our notification system is designed with privacy in mind and operates on an opt-in basis. Here's how notifications work in our app:</p>
-        
-        <p><strong>Notification Permission:</strong> On Android 13 and above, notification permission (POST_NOTIFICATIONS) must be granted by the user. We NEVER automatically request this permission when you install or open the app. Notifications will only appear if you manually enable them from your device's Settings > Apps > Swift Go Browser > Notifications. If you don't enable notifications, the app works perfectly fine; you just won't receive notification alerts.</p>
-        
-        <p><strong>Download Progress Notifications:</strong> When you download files, we show persistent notifications displaying the download progress, file name, download speed, and percentage completed. These notifications update in real-time as the download progresses. When a download completes, the notification changes to show completion status with action buttons to open the file or view it in your file manager. Failed downloads show error notifications with options to retry.</p>
-        
-        <p><strong>Network Status Notifications:</strong> The app monitors your internet connectivity and may show brief toast notifications (small pop-up messages) when your connection is lost or restored. These are not system notifications and don't require notification permission.</p>
-        
-        <p><strong>Website Notifications:</strong> Some websites may request permission to send you notifications. These are web push notifications and are separate from our app notifications. You can allow or deny these on a per-website basis, and they're managed through the browser's permission system.</p>
-        
-        <p><strong>Notification Channels:</strong> We use Android notification channels to categorize notifications (Downloads, Network Status, etc.), allowing you to customize notification settings for each category. You can control notification sound, vibration, and visibility for each channel from Android settings.</p>
-        
-        <p><strong>Notification Interaction:</strong> When you tap on a download notification, the app opens and navigates directly to the downloads screen or the specific downloaded file. This deep linking functionality is handled through Android's notification intent system and stored temporarily in SharedPreferences to ensure proper navigation even when the app is closed.</p>
-        
-        <p><strong>Privacy:</strong> Our notifications never contain sensitive personal information. Download notifications only show file names and progress. We don't track or store your interaction with notifications beyond basic app navigation.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>7. Media Player (Video &amp; Audio Playback)</h2>
+        <p>Swift Go Browser includes a built-in <strong>Media Player</strong> for playing downloaded video and audio files directly within the app, so you do not need a separate media application. The video player supports popular formats including MP4, MOV, AVI, MKV, FLV, WMV, WebM, 3GP, and M4V. The audio player supports MP3, AAC, WAV, OGG, and other common audio formats.</p>
+        <p><strong>Video Player Features:</strong> The built-in video player provides play/pause controls, a seekbar for precise navigation, a 10-second forward/backward double-tap gesture, a fullscreen/portrait orientation toggle, a screen lock feature to prevent accidental touches during playback, and an option to open the file with an external player if the format is not natively supported.</p>
+        <p><strong>Audio Player Features:</strong> The audio player provides full playback controls (play, pause, seek, next/previous) for audio files downloaded from websites.</p>
+        <p><strong>Privacy:</strong> The media player reads files only from your device's local storage (specifically from the Downloads folder). It does NOT connect to the internet, does NOT collect viewing history, does NOT send any data to remote servers, and does NOT require any additional permissions beyond the storage access already granted for the download system. All media playback is entirely local and private.</p>
 
-        <h2>8. Data Storage (Bookmarks, History, Cache & Cookies)</h2>
-        <p>Swift Go Browser stores various types of data locally on your device to enhance your browsing experience and provide essential browser functionality. All data is stored locally on your device and is NEVER transmitted to our servers or any third-party services (except as required by websites you visit). Here's a detailed explanation of what data we store and how it's managed:</p>
-        
-        <p><strong>Browsing History:</strong> The app maintains a record of websites you visit, including the page title, URL, and timestamp. This history is stored locally using the Hive database and Provider state management. History allows you to quickly revisit previously viewed pages and provides search suggestions. You can view your complete history from the History screen, search through it, and delete individual entries or clear all history at once. History data never leaves your device.</p>
-        
-        <p><strong>Bookmarks:</strong> When you bookmark a webpage, we store the page title, URL, favicon (website icon), and the date you bookmarked it. Bookmarks are stored locally using Provider state management and persist across app sessions. You can organize, edit, and delete bookmarks anytime from the Bookmarks screen. Bookmark data is private and stored only on your device.</p>
-        
-        <p><strong>Cookies:</strong> Websites you visit may store cookies in the browser to remember your login sessions, preferences, and other site-specific data. These cookies are managed by the WebView component and are stored in the app's private data directory. Cookies are essential for many websites to function properly (e.g., keeping you logged in). You can clear all cookies from the "Clear Browser Data" screen in app settings.</p>
-        
-        <p><strong>Cache:</strong> The browser caches website resources (images, scripts, stylesheets) to speed up page loading on repeat visits. Cached data is stored in the app's cache directory and is managed automatically by the WebView engine. Cache helps reduce data usage and improve browsing speed. You can clear the cache anytime from the "Clear Browser Data" screen.</p>
-        
-        <p><strong>Local Storage & Session Storage:</strong> Websites can store data locally using HTML5 Local Storage and Session Storage APIs. This data is managed by the WebView and is isolated per website. It's used by websites for various purposes like saving preferences, offline functionality, and app state. You can clear this data from the "Clear Browser Data" screen.</p>
-        
-        <p><strong>App Preferences:</strong> We store your app settings and preferences using SharedPreferences, including your selected search engine, dark mode preference, whether you've seen the onboarding screens, and other app configuration settings. This data is minimal and only used to customize your app experience.</p>
-        
-        <p><strong>Download Records:</strong> Information about your downloads (file name, URL, download date, file size, file path) is stored locally to maintain your download history. This allows you to track completed downloads and access downloaded files easily.</p>
-        
-        <p><strong>Clear Browser Data:</strong> You have complete control over your stored data. The app includes a "Clear Browser Data" feature that allows you to selectively delete browsing history, cookies, cache, and other stored data. You can choose what to delete and clear it with a single tap.</p>
-        
-        <p><strong>Data Location:</strong> All data is stored in the app's private directory on your device (/data/data/com.abhi.swiftgo/ and /storage/emulated/0/Android/data/com.abhi.swiftgo/). This data is protected by Android's app sandbox and is not accessible to other apps. When you uninstall Swift Go Browser, all stored data is automatically deleted by Android.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>8. Voice Search System</h2>
+        <p>Swift Go Browser includes a <strong>Voice Search</strong> feature that allows you to search the web by speaking instead of typing. This feature uses the device's built-in <strong>speech_to_text</strong> engine (Android's on-device speech recognition) to convert your spoken words into a text search query.</p>
+        <p><strong>How Voice Search Works:</strong> When you tap the microphone icon in the search bar, the app requests microphone permission (if not already granted). Once permission is granted, the app begins listening for your voice input. Your speech is processed by Android's native speech recognition engine. After 5 seconds of silence or 12 seconds maximum, the listening session automatically stops. The recognized text is then placed in the search bar for you to confirm or edit before searching.</p>
+        <p><strong>Privacy of Voice Data:</strong> Voice Search is powered by Android's on-device speech recognition API (<code>speech_to_text</code>). Audio may be processed by Google's cloud servers depending on your device's speech recognition settings, but this is governed by Google's privacy policy and not by Swift Go Browser. We do NOT record, store, or transmit your voice audio on our servers.</p>
 
-        <h2>9. Incognito Mode (Private Browsing)</h2>
-        <p>Swift Go Browser includes an Incognito Mode feature that provides enhanced privacy for your browsing sessions. When you browse in Incognito Mode, the app modifies its data storage behavior to ensure your browsing activity remains private. Here's exactly how Incognito Mode works and what it does:</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>9. News Feed System</h2>
+        <p>Swift Go Browser includes a built-in <strong>News Feed</strong> that displays trending news articles directly on your home screen. The news feed is powered by <strong>Google News RSS</strong> (India edition: <code>news.google.com/rss?hl=en-IN&amp;gl=IN&amp;ceid=IN:en</code>), which is a publicly available, region-specific news feed.</p>
+        <p><strong>How the News Feed Works:</strong> When you open the home screen, the app fetches the latest news headlines from Google News RSS. The feed is parsed locally on your device. Article titles, links, source names, and thumbnail images are extracted and displayed. Tapping a news article opens the full article in the browser using the standard WebView, just like loading any other website.</p>
+        <p><strong>Privacy of News Feed:</strong> The news feed request is a standard HTTP GET request to Google News servers. Google's servers will receive your device's IP address as part of any standard network request. We do NOT store, log, or analyze which news articles you read. We do NOT build a reading profile. Your news feed interaction history is NOT stored anywhere in the app.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>10. Notification System</h2>
+        <p>Swift Go Browser includes a comprehensive notification system to keep you informed about important events such as download progress, completed downloads, website alerts, and periodic news updates. Our notification system is designed with privacy in mind and operates on an opt-in basis. All notification processing happens entirely on your device, and no notification data is transmitted to our servers.</p>
+
+        <p><strong>Notification Permission:</strong> On Android 13 and above, notification permission (POST_NOTIFICATIONS) must be explicitly granted by the user. We NEVER automatically request this permission when you install or open the app. You are always in full control. Notifications only appear if you manually enable them from Settings > Apps > Swift Go Browser > Notifications. You can disable all or specific notification categories from Android system settings at any time.</p>
         
+        <p><strong>How Our Notification System Works:</strong> The notification system uses open-source Flutter packages that are approved by Google Play and work entirely on your device. The system displays notifications for downloads, website alerts, and news updates using Android's standard notification features. All notifications are processed locally on your device with no external server communication required for the notification display itself.</p>
+        
+        <p><strong>Notification Categories:</strong> We use Android's Notification Channel system, which allows you to control each type of notification independently from Android Settings > Apps > Swift Go Browser > Notifications. Our app has five distinct notification categories:</p>
+        <ul>
+            <li><strong>Download Progress:</strong> Shows real-time download progress with speed, percentage, and file name during active downloading.</li>
+            <li><strong>Download Complete:</strong> Displays a notification when a download finishes, tapping opens the Downloads screen.</li>
+            <li><strong>Download Failed:</strong> Shows an alert if a download fails, tapping opens the Downloads screen to retry.</li>
+            <li><strong>Website Notifications:</strong> Displays notifications from websites you visit (such as WhatsApp Web or news sites), tapping reopens that specific website.</li>
+            <li><strong>News Notifications:</strong> Shows periodic Google News headline notifications, tapping opens the full article in the browser.</li>
+        </ul>
+        
+        <p><strong>Download Notifications:</strong> When you download a file, a persistent notification shows the file name, download speed, and completion percentage in real-time. This notification is managed entirely on your device using Android's native notification system. When the download completes, the notification icon changes to a checkmark. No personal data is included in download notifications - only the file name you are downloading is shown.</p>
+        
+        <p><strong>Website Notifications:</strong> Some websites (such as WhatsApp Web or news portals) request permission to send you browser notifications. When a website requests permission to send you notifications, our browser asks for your permission through a native Android dialog. If you grant permission, we display website notifications as native Android notifications. Each website notification includes the URL of the originating website. Tapping the notification reopens Swift Go Browser and navigates directly to that website. We do NOT store, log, or transmit the content of website notifications to our servers.</p>
+        
+        <p><strong>Google News Notifications:</strong> Our app can periodically fetch Google News headlines and display them as notifications. This feature uses Android's background task scheduler, which is the same technology used by Gmail, Chrome, and other major apps for periodic background work. Here's how it works:</p>
+        <ul>
+            <li>The app registers a background task that runs approximately every 15 minutes when your device is connected to the internet.</li>
+            <li>This background task makes an HTTPS request to the publicly available Google News RSS feed (https://news.google.com/rss), which is the same URL that any browser would request when you visit Google News.</li>
+            <li>The response contains news headlines, article links, and publication dates, which are processed locally on your device.</li>
+            <li>We compare the fetched article links against a locally stored list of "already seen" articles to avoid showing duplicate notifications.</li>
+            <li>We display notifications only for articles that are genuinely new, showing up to 3 notifications per 15-minute cycle to avoid notification spam.</li>
+            <li>The article link is marked as seen in local storage so the same article never generates a duplicate notification.</li>
+            <li>Tapping a news notification opens Swift Go Browser and navigates directly to the full article URL.</li>
+        </ul>
+        
+        <p><strong>News Notification Privacy:</strong> When fetching Google News, only your device's IP address is sent to Google News servers, which is unavoidable for any internet request and is the same as opening Google Chrome and visiting Google News. No account data, user ID, or personal information is sent to our servers or to Google News. The list of "seen article links" is stored exclusively in your device's local storage and never leaves your device. This local list is automatically deleted when you uninstall the app. You can disable news notifications independently by turning off the News Notifications channel in Android Settings.</p>
+        
+        <p><strong>Notification Navigation:</strong> When you tap a notification, the app opens and navigates to the relevant screen. The behavior depends on whether the app is open, in the background, or fully closed. For download notifications, tapping opens the Downloads screen. For website and news notifications, tapping opens the specific website URL in the browser. All navigation data is processed only within your device. No navigation events are logged or transmitted to our servers.</p>
+        
+        <p><strong>Privacy Summary for Notifications:</strong></p>
+        <ul>
+            <li>No notification content is transmitted to our servers.</li>
+            <li>Notifications only show file names (downloads), website-provided text (website notifications), or public headlines (news).</li>
+            <li>The "seen articles" list used to prevent duplicate news notifications is stored locally on your device only.</li>
+            <li>News fetching makes HTTPS requests only to the public Google News RSS endpoint, which is the same request any browser would make.</li>
+            <li>You can disable all notification types independently from Android Settings without affecting any other browser functionality.</li>
+            <li>On Android 13+, notification permission is never automatically requested - it is purely opt-in.</li>
+            <li>The background task for news notifications requires certain permissions (RECEIVE_BOOT_COMPLETED, FOREGROUND_SERVICE) to function reliably, which allows the task to restart after device reboots and run in the background.</li>
+        </ul>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>11. Search Engine &amp; Smart URL System</h2>
+        <p>Swift Go Browser allows you to choose your preferred <strong>search engine</strong> for all web searches performed from the address bar or voice search. The following search engines are supported: <strong>Google, DuckDuckGo, Bing, Yahoo, and Yandex</strong>. You can change your preferred search engine at any time from <em>Settings &gt; Search Engine</em>.</p>
+        <p><strong>How It Works:</strong> When you type a query in the address bar, our smart URL detection system determines whether you have typed a URL (domain, IP, or link with a scheme like <code>http://</code>) or a search query. If it is a URL, the browser navigates directly to it. If it is a search query, it is forwarded to your chosen search engine using that engine's standard search URL with proper URL encoding. We support extended URL schemes including <code>http</code>, <code>https</code>, <code>file</code>, <code>ftp</code>, <code>mailto</code>, <code>tel</code>, <code>market</code>, <code>intent</code>, <code>whatsapp</code>, and <code>tg</code> (Telegram).</p>
+        <p><strong>Privacy:</strong> Your search queries are sent directly to your chosen search engine's servers, and their respective privacy policies govern data handling. Swift Go Browser does NOT intercept, log, or analyze your search queries. Your search engine preference is stored locally on your device using SharedPreferences and is never transmitted to our servers.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>12. Home Screen Shortcuts System</h2>
+        <p>Swift Go Browser includes a <strong>Home Screen Shortcuts</strong> feature that allows you to save frequently visited websites as quick-access shortcut tiles directly on the app's home screen. This provides faster navigation to your favorite sites without needing to type URLs repeatedly.</p>
+        <p><strong>How Shortcuts Work:</strong> While browsing a website, you can tap the three-dot menu and select "Add Shortcut." The current page's title and URL are saved as a shortcut. Shortcuts appear on the home screen as icon tiles with the website's favicon and title. You can rearrange shortcuts by long-pressing and dragging. Shortcuts can be deleted individually by long-pressing and selecting delete.</p>
+        <p><strong>Privacy:</strong> Shortcut data (website title and URL) is stored locally on your device using <strong>SharedPreferences</strong>. This data is only present on your device and is never transmitted to our servers. The website favicon displayed in shortcuts is loaded from Google's public favicon service (<code>google.com/s2/favicons</code>) when displaying a shortcut, which involves a network request to Google's servers with the domain name of the website. No personal data beyond the domain name is sent in this request.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>13. Data Storage (Bookmarks, History, Cache &amp; Cookies)</h2>
+        <p>Swift Go Browser stores various types of data locally on your device to enhance your browsing experience. All data is stored locally and is <strong>NEVER</strong> transmitted to our servers or any third-party services (except as required by websites you visit).</p>
+        <p><strong>Browsing History:</strong> The app maintains a record of websites you visit, including the page title, URL, and timestamp. This history is stored locally using the <strong>Hive</strong> database and Provider state management. You can view, search, and delete individual entries or clear all history at once from the History screen.</p>
+        <p><strong>Bookmarks:</strong> When you bookmark a webpage using the three-dot menu, we store the page title, URL, favicon URL, and the date you bookmarked it. Bookmarks are stored locally and persist across app sessions.</p>
+        <p><strong>Cookies:</strong> Websites you visit may store cookies in the browser to remember your login sessions, preferences, and other site-specific data. These cookies are managed by the WebView component and stored in the app's private data directory. You can clear all cookies from the "Clear Browser Data" screen.</p>
+        <p><strong>Cache:</strong> The browser caches website resources (images, scripts, stylesheets) to speed up page loading on repeat visits. You can clear the cache anytime from "Clear Browser Data."</p>
+        <p><strong>App Preferences:</strong> We store your app settings using <strong>SharedPreferences</strong>, including your selected search engine, dark/light mode preference, onboarding completion status, home screen shortcuts, notification preferences, and other app configuration settings.</p>
+        <p><strong>Download Records:</strong> Information about your downloads (file name, URL, download date, file size, file path) is stored locally using the <strong>flutter_downloader</strong> library's built-in database to maintain your download history.</p>
+        <p><strong>Clear Browser Data:</strong> You have complete control over your stored data via the "Clear Browser Data" feature in Settings, which lets you selectively delete history, cookies, cache, local storage, and other browsing data.</p>
+        <p><strong>Data Location:</strong> All data is stored in the app's private directory (<code>/data/data/com.abhi.swiftgo/</code>) protected by Android's app sandbox. When you uninstall Swift Go Browser, all stored data is automatically deleted.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>14. Incognito Mode (Private Browsing)</h2>
+        <p>Swift Go Browser includes an <strong>Incognito Mode</strong> that provides enhanced privacy for your browsing sessions. You can open an Incognito tab from the three-dot menu item "New Incognito Tab." Incognito tabs are visually distinguished from normal tabs.</p>
         <p><strong>What Incognito Mode Does:</strong></p>
         <ul>
-            <li><strong>No History Saved:</strong> Websites you visit in Incognito Mode are NOT added to your browsing history. Once you close the incognito tab, there's no local record of the websites you visited.</li>
-            <li><strong>No Cookies Persisted:</strong> Cookies created during an incognito session are temporary and are deleted when you close the incognito tab. Websites won't remember you after the session ends.</li>
-            <li><strong>No Cache Retention:</strong> Cached resources from incognito browsing are not permanently stored. The cache is cleared when you close the incognito session.</li>
-            <li><strong>Separate Session:</strong> Incognito tabs run in a separate browsing context from your normal tabs. This means you can be logged into a website in a normal tab and browse the same website logged out (or with a different account) in an incognito tab.</li>
+            <li><strong>No History Saved:</strong> Websites visited in Incognito Mode are NOT added to your browsing history.</li>
+            <li><strong>No Cookies Persisted:</strong> Cookies created during an incognito session are temporary and deleted when you close the incognito tab.</li>
+            <li><strong>No Cache Retention:</strong> Cached resources from incognito browsing are not permanently stored.</li>
+            <li><strong>Separate Session:</strong> Incognito tabs run in a separate browsing context from normal tabs, allowing different login states simultaneously.</li>
             <li><strong>No Autofill:</strong> Form data and search queries entered in Incognito Mode are not saved for autofill suggestions.</li>
         </ul>
-        
         <p><strong>What Incognito Mode Does NOT Do:</strong></p>
         <ul>
-            <li><strong>Not Anonymous:</strong> Incognito Mode does NOT make you anonymous on the internet. Websites you visit can still see your IP address, and your internet service provider (ISP) can still see your browsing activity.</li>
-            <li><strong>No Download Privacy:</strong> Files you download in Incognito Mode are still saved to your device's Downloads folder and appear in your download history.</li>
-            <li><strong>No Bookmark Privacy:</strong> If you bookmark a page in Incognito Mode, that bookmark is saved permanently like any other bookmark.</li>
-            <li><strong>No Network Privacy:</strong> Your network administrator, ISP, or the websites you visit can still track your activity. Incognito Mode only affects local data storage on your device.</li>
+            <li><strong>Not Anonymous:</strong> Incognito Mode does NOT make you anonymous online. Websites can still see your IP address, and your ISP can still see your browsing activity.</li>
+            <li><strong>Downloads Are Saved:</strong> Files downloaded in Incognito Mode are still saved to your device's Downloads folder.</li>
+            <li><strong>Bookmarks Are Permanent:</strong> Any bookmark you add in Incognito Mode is saved permanently.</li>
         </ul>
-        
-        <p><strong>How to Use Incognito Mode:</strong> You can open an incognito tab from the tab switcher or menu. Incognito tabs are visually distinguished from normal tabs (typically with a different color scheme or icon). You can have both normal and incognito tabs open simultaneously. When you close all incognito tabs or exit the app, all incognito session data is automatically cleared.</p>
-        
-        <p><strong>Use Cases:</strong> Incognito Mode is useful when you want to browse without leaving traces on your device, such as when shopping for gifts, using a shared device, or accessing websites without affecting your browsing history and cookies.</p>
 
-        <h2>10. Third-Party Services & Data Sharing</h2>
-        <p>Swift Go Browser integrates several third-party services to provide essential functionality and improve app quality. These services may collect and process certain data according to their own privacy policies. Here's a complete list of third-party services we use and what data they may access:</p>
-        
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>15. Dark Mode &amp; Theme System</h2>
+        <p>Swift Go Browser includes a <strong>Dark Mode</strong> (also called Night Mode) and a <strong>Light Mode</strong> theme system that adjusts the app's color scheme for comfortable viewing in different lighting conditions. You can switch between these themes from the Settings screen.</p>
+        <p><strong>App-Level Dark Mode:</strong> When you enable Dark Mode, the app's UI elements switch to a dark color scheme with reduced glare.</p>
+        <p><strong>WebView Dark Mode:</strong> The browser also applies a CSS-based dark filter to web pages when Dark Mode is enabled, reducing the brightness and adjusting colors of websites that do not natively support dark mode. This is done entirely on-device using CSS injection (no network requests).</p>
+        <p><strong>Privacy:</strong> Your theme preference (dark or light) is stored locally in SharedPreferences on your device and is never transmitted to our servers.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>16. Third-Party Services &amp; Data Sharing</h2>
+        <p>Swift Go Browser integrates several third-party services to provide essential functionality. These services may collect and process certain data according to their own privacy policies.</p>
         <p><strong>Google AdMob (Advertising):</strong></p>
         <ul>
             <li>Purpose: To display advertisements and generate revenue to keep the app free.</li>
-            <li>Data Collected: Advertising ID, device information (model, OS version), IP address, app usage data, ad interaction data.</li>
+            <li>Data Collected: Advertising ID, device information, IP address, app usage data, ad interaction data.</li>
             <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
-            <li>Your Control: You can opt out of personalized ads in your device settings (Settings > Google > Ads).</li>
+            <li>Your Control: You can opt out of personalized ads in <em>Settings &gt; Google &gt; Ads</em> on your device.</li>
         </ul>
-        
-        <p><strong>Google Firebase (Analytics & Crash Reporting):</strong></p>
+        <p><strong>Google Firebase (Analytics &amp; Crash Reporting):</strong></p>
         <ul>
-            <li>Firebase Analytics: Collects anonymous usage statistics to help us understand how users interact with the app, which features are most used, and how we can improve the app.</li>
-            <li>Firebase Crashlytics: Automatically reports app crashes and errors, including device information, app version, and crash logs. This helps us identify and fix bugs quickly.</li>
-            <li>Data Collected: Device model, OS version, app version, country/region, app usage patterns, crash logs, performance data.</li>
+            <li>Firebase Analytics: Collects anonymous usage statistics to help us understand feature usage and improve the app.</li>
+            <li>Firebase Crashlytics: Automatically reports app crashes and errors, including device information, app version, and crash logs.</li>
             <li>Privacy Policy: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></li>
             <li>Note: Firebase data is anonymized and aggregated. We cannot identify individual users from this data.</li>
         </ul>
-        
-        <p><strong>Google Mobile Services:</strong></p>
+        <p><strong>Google News RSS (News Feed &amp; News Notifications):</strong></p>
         <ul>
-            <li>Purpose: Required for AdMob and Firebase functionality on Android devices.</li>
-            <li>Data Collected: Device information, Google account information (if signed in to device).</li>
+            <li>Purpose: To provide trending news articles on the app home screen AND for periodic background news notifications via WorkManager.</li>
+            <li>Data Collected: Only your device's IP address as part of the standard network request; no personal data is sent.</li>
             <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
         </ul>
-        
-        <p><strong>Flutter Framework:</strong></p>
+        <p><strong>Google Favicon Service (Shortcuts &amp; Bookmarks):</strong></p>
         <ul>
-            <li>Purpose: The app is built using Flutter, Google's UI framework.</li>
-            <li>Data Collected: Flutter itself doesn't collect data, but it enables the app's functionality.</li>
+            <li>Purpose: To display website icons for shortcuts and bookmarks.</li>
+            <li>Data Sent: The domain name of the website whose favicon is being fetched.</li>
+            <li>Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></li>
+        </ul>
+        <p><strong>Android Speech Recognition (Voice Search):</strong></p>
+        <ul>
+            <li>Purpose: To convert spoken words to text for voice search.</li>
+            <li>Data: Audio may be processed by Google's speech servers depending on the device's speech engine; governed by Google's privacy policy. Swift Go Browser does not record or store voice audio.</li>
+        </ul>
+        <p><strong>Flutter Framework &amp; Open-Source Packages:</strong></p>
+        <ul>
+            <li>The app is built using Flutter and open-source packages including <code>flutter_local_notifications</code>, <code>workmanager</code>, <code>flutter_inappwebview</code>, <code>flutter_downloader</code>, and <code>shared_preferences</code>. These packages do not independently collect user data.</li>
             <li>Privacy Policy: <a href="https://flutter.dev/privacy" target="_blank">https://flutter.dev/privacy</a></li>
         </ul>
-        
-        <p><strong>WebView Engine (Android System WebView):</strong></p>
-        <ul>
-            <li>Purpose: Renders web pages within the app.</li>
-            <li>Data Collected: WebView may collect data as configured by Google and your device manufacturer. This includes browsing data, cookies, and cache as described in Section 8.</li>
-            <li>Privacy Policy: Governed by Android and Google Chrome privacy policies.</li>
-        </ul>
-        
-        <p><strong>Websites You Visit:</strong></p>
-        <p><strong>Important:</strong> When you browse websites using Swift Go Browser, those websites may collect data according to their own privacy policies. This includes cookies, tracking scripts, analytics, and any information you provide to those websites. We have no control over third-party websites' data collection practices. We recommend reviewing the privacy policy of each website you visit.</p>
-        
-        <p><strong>Data Sharing:</strong> We do NOT sell, rent, or share your personal data with third parties for their marketing purposes. The only data sharing that occurs is:</p>
-        <ul>
-            <li>With AdMob/Firebase as described above (automated and necessary for app functionality).</li>
-            <li>With websites you choose to visit (as part of normal browsing).</li>
-            <li>As required by law or legal process.</li>
-        </ul>
-        
-        <p><strong>International Data Transfers:</strong> Some third-party services (Google AdMob, Firebase) may transfer data to servers located outside your country. These services comply with applicable data protection laws and use appropriate safeguards for international transfers.</p>
+        <p><strong>Data Sharing:</strong> We do NOT sell, rent, or share your personal data with third parties for marketing purposes. The only data sharing that occurs is with AdMob/Firebase (automated for app functionality), with websites you choose to visit (as part of normal browsing), and as required by law or legal process.</p>
 
-        <h2>11. Children's Privacy (COPPA Compliance)</h2>
-        <p>Swift Go Browser is a general-purpose web browser and is not specifically designed for or directed at children under the age of 13. We are committed to complying with the Children's Online Privacy Protection Act (COPPA) and similar international regulations protecting children's privacy.</p>
-        
-        <p><strong>Age Restriction:</strong> We do not knowingly collect personal information from children under 13 years of age. The app does not have age verification mechanisms, as it's a browser that provides access to the open internet. We rely on parents and guardians to monitor their children's device usage and internet access.</p>
-        
-        <p><strong>Parental Responsibility:</strong> If you are a parent or guardian and you believe your child has provided personal information to us or through websites accessed via our browser, please contact us immediately. We will take steps to remove such information from our systems.</p>
-        
-        <p><strong>AdMob & Children:</strong> Our AdMob integration is configured to comply with COPPA and Google's policies regarding child-directed content. We do not enable personalized ads for child-directed content. However, since Swift Go is a general browser that can access any website, parents should use parental control software and supervise their children's internet usage.</p>
-        
-        <p><strong>Recommendations for Parents:</strong></p>
-        <ul>
-            <li>Use Android's parental control features and restricted user profiles.</li>
-            <li>Install parental control apps that filter web content.</li>
-            <li>Educate children about online safety and privacy.</li>
-            <li>Monitor your child's browsing history and app usage.</li>
-            <li>Consider using child-safe browsers specifically designed for children instead of general-purpose browsers.</li>
-        </ul>
-        
-        <p><strong>Third-Party Websites:</strong> Websites accessed through Swift Go Browser may have their own policies regarding children's privacy. We have no control over third-party websites and cannot guarantee they comply with COPPA. Parents should review the privacy policies of websites their children visit.</p>
-        
-        <p>If we discover that we have inadvertently collected personal information from a child under 13, we will delete that information as quickly as possible. If you become aware of any data we have collected from children under 13, please contact us at the email provided in Section 15.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>17. Children's Privacy (COPPA Compliance)</h2>
+        <p>Swift Go Browser is a general-purpose web browser and is not specifically designed for or directed at children under the age of 13. We do not knowingly collect personal information from children under 13 years of age. If you are a parent or guardian and you believe your child has provided personal information through websites accessed via our browser, please contact us immediately at <a href="/cdn-cgi/l/email-protection#ec9f9b858a988b838e9e839b9f899eac8b818d8580c28f8381"><span class="__cf_email__" data-cfemail="3340445a5547545c51415c4440564173545e525a5f1d505c5e">[email&#160;protected]</span></a>. Our AdMob integration is configured to comply with COPPA and Google's policies regarding child-directed content.</p>
 
-        <h2>12. Data Security & Protection</h2>
-        <p>We take the security of your data seriously and implement appropriate technical and organizational measures to protect your information from unauthorized access, alteration, disclosure, or destruction. Here's how we protect your data:</p>
-        
-        <p><strong>Local Storage Security:</strong> All data stored by Swift Go Browser (history, bookmarks, preferences, download records) is stored in the app's private directory, which is protected by Android's app sandbox. Other apps cannot access this data without root access to your device. The app uses secure storage mechanisms provided by Android, including SharedPreferences for settings and Hive database for structured data.</p>
-        
-        <p><strong>Encryption in Transit:</strong> When you visit HTTPS websites, your connection is encrypted using SSL/TLS protocols. This encryption is handled by the website and the Android WebView component. We display security indicators to help you identify secure connections. However, we cannot guarantee the security of HTTP (non-encrypted) connections, which is why we warn you about insecure websites.</p>
-        
-        <p><strong>No Remote Storage:</strong> We do NOT store your browsing data, history, bookmarks, or any personal information on remote servers. Everything stays on your device. This significantly reduces the risk of data breaches, as there's no central database of user information that could be compromised.</p>
-        
-        <p><strong>Secure Permissions:</strong> We implement runtime permission requests, ensuring that sensitive device features (camera, microphone, location, storage) are only accessed when explicitly needed and authorized by you. Permissions are enforced by the Android operating system.</p>
-        
-        <p><strong>Third-Party Security:</strong> For third-party services (AdMob, Firebase), we rely on Google's security infrastructure, which includes encryption, access controls, and regular security audits. Google is a leader in data security and complies with international security standards.</p>
-        
-        <p><strong>Download Security:</strong> Downloaded files are scanned by your device's security software (if installed). We warn you about potentially dangerous file types (APK, EXE) before downloading. However, we recommend using antivirus software and being cautious about what files you download from the internet.</p>
-        
-        <p><strong>App Updates:</strong> We regularly update the app to patch security vulnerabilities, update dependencies, and improve security features. We recommend keeping Swift Go Browser updated to the latest version for optimal security.</p>
-        
-        <p><strong>Limitations:</strong> While we implement strong security measures, no system is completely secure. You are responsible for:</p>
-        <ul>
-            <li>Keeping your device secure with a lock screen password/PIN.</li>
-            <li>Not rooting your device, which can compromise Android's security model.</li>
-            <li>Being cautious about which websites you visit and what information you provide to them.</li>
-            <li>Keeping your device's operating system and security patches up to date.</li>
-            <li>Using secure Wi-Fi networks and avoiding public Wi-Fi for sensitive transactions.</li>
-        </ul>
-        
-        <p><strong>Data Breach Notification:</strong> In the unlikely event of a data breach affecting user data, we will notify affected users in accordance with applicable laws and regulations. However, since we don't store user data on our servers, the risk of such a breach is minimal.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>18. Data Security &amp; Protection</h2>
+        <p>We take the security of your data seriously and implement appropriate technical and organizational measures to protect your information from unauthorized access, alteration, disclosure, or destruction.</p>
+        <p><strong>Local Storage Security:</strong> All data stored by Swift Go Browser is stored in the app's private directory protected by Android's app sandbox. Other apps cannot access this data without root access to your device.</p>
+        <p><strong>Encryption in Transit:</strong> When you visit HTTPS websites, your connection is encrypted using SSL/TLS protocols. The WorkManager news fetch uses HTTPS. For HTTP websites, we display security warnings.</p>
+        <p><strong>No Remote Storage:</strong> We do NOT store your browsing data, history, bookmarks, shortcuts, or any personal information on remote servers. Everything stays on your device.</p>
+        <p><strong>Secure Permissions:</strong> We implement runtime permission requests, ensuring that sensitive device features are only accessed when explicitly authorized by you.</p>
+        <p><strong>App Updates:</strong> We regularly update the app to patch security vulnerabilities and update dependencies. We recommend keeping Swift Go Browser updated to the latest version.</p>
 
-        <h2>13. Your Privacy Rights & Choices</h2>
-        <p>You have complete control over your data and privacy when using Swift Go Browser. Here are your rights and how to exercise them:</p>
-        
-        <p><strong>Right to Access:</strong> You can access all data stored by the app at any time. Your browsing history is available in the History screen, bookmarks in the Bookmarks screen, downloads in the Downloads screen, and app settings in the Settings screen.</p>
-        
-        <p><strong>Right to Delete:</strong> You can delete your data at any time:</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>19. Your Privacy Rights &amp; Choices</h2>
+        <p>You have complete control over your data and privacy when using Swift Go Browser.</p>
+        <p><strong>Right to Delete:</strong></p>
         <ul>
-            <li><strong>Individual Items:</strong> Delete specific history entries, bookmarks, or downloads by swiping or using delete buttons.</li>
-            <li><strong>Bulk Deletion:</strong> Use the "Clear Browser Data" feature in Settings to delete all history, cookies, cache, and other browsing data at once.</li>
-            <li><strong>Complete Removal:</strong> Uninstalling the app will permanently delete all app data from your device.</li>
+            <li><strong>Individual Items:</strong> Delete specific history entries, bookmarks, shortcuts, or downloads using swipe or delete buttons.</li>
+            <li><strong>Bulk Deletion:</strong> Use "Clear Browser Data" in Settings to delete all history, cookies, cache, and browsing data at once.</li>
+            <li><strong>Complete Removal:</strong> Uninstalling the app will permanently delete all app data from your device, including the news notification "seen articles" list.</li>
         </ul>
-        
-        <p><strong>Right to Control Permissions:</strong> You can review and modify all app permissions at any time from Android Settings > Apps > Swift Go Browser > Permissions. You can revoke any permission, though this may affect related functionality.</p>
-        
-        <p><strong>Right to Opt-Out of Personalized Ads:</strong> You can opt out of personalized advertising by:</p>
-        <ul>
-            <li>Going to your device Settings > Google > Ads.</li>
-            <li>Enabling "Opt out of Ads Personalization."</li>
-        </ul>
-        <p>This will prevent AdMob from using your advertising ID for personalized ads, though you'll still see non-personalized ads.</p>
-        
-        <p><strong>Right to Disable Notifications:</strong> You can disable all notifications from Settings > Apps > Swift Go Browser > Notifications, or customize notification channels to control which types of notifications you receive.</p>
-        
-        <p><strong>Right to Use Incognito Mode:</strong> You can browse privately using Incognito Mode, which prevents local storage of history, cookies, and cache for that session.</p>
-        
-        <p><strong>Right to Data Portability:</strong> Since all data is stored locally on your device, you can access it through the app's interface. However, we don't currently provide an export feature for bulk data export. If you need to export your data, please contact us.</p>
-        
-        <p><strong>Right to Object:</strong> You can object to data processing by:</p>
-        <ul>
-            <li>Disabling specific features that collect data.</li>
-            <li>Using Incognito Mode for private browsing.</li>
-            <li>Opting out of personalized ads.</li>
-            <li>Uninstalling the app if you disagree with our practices.</li>
-        </ul>
-        
-        <p><strong>Right to Lodge a Complaint:</strong> If you believe we have violated your privacy rights or applicable data protection laws, you have the right to lodge a complaint with your local data protection authority.</p>
-        
-        <p><strong>California Privacy Rights (CCPA):</strong> If you are a California resident, you have additional rights under the California Consumer Privacy Act, including the right to know what personal information we collect, the right to delete personal information, and the right to opt-out of the sale of personal information. We do NOT sell personal information.</p>
-        
-        <p><strong>European Privacy Rights (GDPR):</strong> If you are in the European Economic Area (EEA), you have rights under the General Data Protection Regulation, including the right to access, rectification, erasure, restriction of processing, data portability, and objection. Since we don't collect or store personal data on our servers, most GDPR requests can be fulfilled by using the app's built-in data management features.</p>
-        
-        <p><strong>How to Exercise Your Rights:</strong> Most rights can be exercised directly through the app's interface. For requests that require our assistance, please contact us at the email address provided in Section 15.</p>
+        <p><strong>Right to Control Permissions:</strong> You can review and modify all app permissions at <em>Android Settings &gt; Apps &gt; Swift Go Browser &gt; Permissions</em> at any time.</p>
+        <p><strong>Right to Opt-Out of Personalized Ads:</strong> Go to <em>Settings &gt; Google &gt; Ads</em> on your device and enable "Opt out of Ads Personalization."</p>
+        <p><strong>Right to Disable Notifications:</strong> Disable all notifications or individual channels (Download, Website, News) from <em>Settings &gt; Apps &gt; Swift Go Browser &gt; Notifications</em>.</p>
+        <p><strong>Right to Use Incognito Mode:</strong> Browse privately using Incognito Mode to prevent local storage of history, cookies, and cache for that session.</p>
+        <p><strong>Right to Choose Your Search Engine:</strong> Choose from Google, DuckDuckGo, Bing, Yahoo, or Yandex at <em>Settings &gt; Search Engine</em>.</p>
+        <p><strong>California Privacy Rights (CCPA):</strong> We do NOT sell personal information.</p>
+        <p><strong>European Privacy Rights (GDPR):</strong> Since we do not store personal data on our servers, most GDPR requests can be fulfilled using the app's built-in data management features.</p>
 
-        <h2>14. Changes to This Privacy Policy</h2>
-        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, app features, legal requirements, or for other operational, legal, or regulatory reasons. When we make changes, we will update the "Last Updated" date at the top of this policy.</p>
-        
-        <p><strong>Notification of Changes:</strong> If we make material changes to this Privacy Policy that significantly affect your privacy rights or how we handle your data, we will notify you through one or more of the following methods:</p>
-        <ul>
-            <li>Displaying a prominent notice within the app.</li>
-            <li>Sending a notification through the app (if you have notifications enabled).</li>
-            <li>Updating the app description in the Google Play Store.</li>
-        </ul>
-        
-        <p><strong>Your Acceptance:</strong> Your continued use of Swift Go Browser after any changes to this Privacy Policy constitutes your acceptance of the updated policy. If you do not agree with the changes, you should stop using the app and uninstall it from your device.</p>
-        
-        <p><strong>Review Regularly:</strong> We encourage you to review this Privacy Policy periodically to stay informed about how we protect your privacy and what data we collect. You can always access the most current version of this policy from the app's Settings > Privacy Policy section or from our website/Play Store listing.</p>
-        
-        <p><strong>Version History:</strong> We maintain a record of significant policy changes. If you would like to review previous versions of this policy or understand what has changed, please contact us at the email address provided in Section 15.</p>
-        
-        <p><strong>No Retroactive Changes:</strong> Changes to this Privacy Policy will not apply retroactively. We will not change how we handle previously collected data without your consent, except as required by law.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>20. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, app features, or legal requirements. When we make changes, we will update the "Last Updated" date at the top of this policy. Your continued use of Swift Go Browser after any changes constitutes your acceptance of the updated policy.</p>
 
-        <h2>15. Contact Us</h2>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>21. Contact Us</h2>
         <div class="contact-info">
-            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your data, or our privacy practices, please don't hesitate to contact us. We are committed to addressing your privacy concerns promptly and transparently.</p>
-            
-            <p><strong>Contact Information:</strong></p>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your data, or our privacy practices, please contact us.</p>
             <p><strong>Email:</strong> <a href="mailto:swiftgobrowser@gmail.com">swiftgobrowser@gmail.com</a></p>
-            <p><strong>Developed by:</strong> Mr Abhishek & Team</p>
-            
-            <p><strong>What You Can Contact Us About:</strong></p>
-            <ul>
-                <li>Questions about this Privacy Policy or our data practices.</li>
-                <li>Requests to exercise your privacy rights (access, deletion, etc.).</li>
-                <li>Concerns about data security or privacy violations.</li>
-                <li>Reports of bugs or security vulnerabilities.</li>
-                <li>Feedback about privacy features or suggestions for improvement.</li>
-                <li>Complaints about third-party services or advertisements.</li>
-                <li>Requests to delete data of children under 13.</li>
-                <li>General inquiries about the app.</li>
-            </ul>
-            
-            <p><strong>Response Time:</strong> We aim to respond to all privacy-related inquiries within 7-14 business days. For urgent security concerns, we will respond as quickly as possible.</p>
-            
-            <p><strong>Support:</strong> For technical support or non-privacy-related questions, you can also reach us through the Google Play Store app listing or through the app's Settings > Help & Support section.</p>
-            
-            <p><strong>Data Protection Officer:</strong> For users in the European Economic Area (EEA), if you have concerns about how we handle your data or wish to exercise your GDPR rights, please contact us at the email address above with "GDPR Request" in the subject line.</p>
+            <p><strong>Developed by:</strong> Mr Abhishek &amp; Team</p>
+            <p><strong>Response Time:</strong> We aim to respond to all privacy-related inquiries within 7–14 business days.</p>
         </div>
 
-        <h2>16. Terms and Conditions</h2>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>22. Terms and Conditions</h2>
         <div class="info-box">
-            <p>In addition to this Privacy Policy, your use of Swift Go Browser is also governed by our Terms and Conditions. The Terms and Conditions outline the rules, restrictions, and legal agreements that apply to your use of the application.</p>
-            
-            <p><strong>What the Terms and Conditions Cover:</strong></p>
-            <ul>
-                <li><strong>Service Description:</strong> Detailed explanation of what Swift Go Browser is and how it functions as a web browsing tool.</li>
-                <li><strong>User Responsibilities:</strong> Your obligations while using the browser, including lawful use and compliance with applicable laws.</li>
-                <li><strong>Prohibited Activities:</strong> Activities that are strictly forbidden while using Swift Go Browser, such as accessing illegal content or engaging in harmful activities.</li>
-                <li><strong>Third-Party Content:</strong> Clarification that Swift Go Browser does not control or endorse content on third-party websites you access through the browser.</li>
-                <li><strong>Liability Disclaimer:</strong> Important information about the limitations of our liability for issues arising from your use of the app.</li>
-                <li><strong>Account Termination:</strong> Conditions under which we may restrict or terminate access to Swift Go Browser.</li>
-                <li><strong>Legal Compliance:</strong> Governing law and dispute resolution procedures.</li>
-            </ul>
-            
-            <p><strong>Why You Should Read the Terms:</strong> The Terms and Conditions contain important legal information that affects your rights and responsibilities when using Swift Go. By using the app, you agree to both the Privacy Policy and the Terms and Conditions. Understanding these documents helps ensure you use the browser safely and legally.</p>
-            
-            <p><strong>Relationship Between Privacy Policy and Terms:</strong> While this Privacy Policy focuses specifically on how we handle your data and protect your privacy, the Terms and Conditions address the broader legal relationship between you and Swift Go Browser. Both documents work together to govern your use of the application.</p>
-            
-            <p class="notice">
-                <strong>Important:</strong> Please read our complete Terms and Conditions document to understand all aspects of your agreement with Swift Go Browser. You can access the Terms and Conditions here:
-                <br><br>
+            <p>In addition to this Privacy Policy, your use of Swift Go Browser is also governed by our Terms and Conditions.</p>
+            <div class="notice">
+                <strong>Important:</strong> Please read our complete Terms and Conditions document:<br><br>
                 <a href="https://mrabhishek777.github.io/swift-go-privacy-policy/terms-and-conditions.html" target="_blank">View Terms and Conditions</a>
-            </p>
-            
-            <p><strong>Acceptance:</strong> By downloading, installing, or using Swift Go Browser, you acknowledge that you have read, understood, and agreed to be bound by both this Privacy Policy and our Terms and Conditions. If you do not agree with any part of these documents, you must discontinue use of the application immediately.</p>
-            
-            <p><strong>Updates:</strong> Both the Privacy Policy and Terms and Conditions may be updated from time to time. Any changes will be reflected with an updated "Last Updated" date. Continued use of the app after changes constitutes acceptance of the revised terms and policies.</p>
+            </div>
         </div>
 
-        <h2>17. Google Play Store Compliance</h2>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>23. Google Play Store Compliance</h2>
         <p>This section addresses specific requirements for Google Play Store compliance and provides additional transparency about our app's data handling practices.</p>
-        
-        <p><strong>Data Safety Section Disclosures:</strong></p>
-        <p>Swift Go Browser collects and shares the following types of data as disclosed in the Google Play Store Data Safety section:</p>
-        
-        <p><strong>Data Collected:</strong></p>
+        <p><strong>Data Collected by the App:</strong></p>
         <ul>
-            <li>Device or Other IDs: Advertising ID (collected by AdMob for ad serving).</li>
-            <li>App Activity: App interactions, in-app search history (collected by Firebase Analytics).</li>
-            <li>App Info and Performance: Crash logs, diagnostics (collected by Firebase Crashlytics).</li>
+            <li><strong>Device or Other IDs:</strong> Advertising ID (collected by AdMob for ad serving).</li>
+            <li><strong>App Activity:</strong> App interactions and usage patterns (collected by Firebase Analytics).</li>
+            <li><strong>App Info and Performance:</strong> Crash logs and diagnostics (collected by Firebase Crashlytics).</li>
+            <li><strong>Audio (temporary):</strong> Voice input when you use Voice Search (processed by Android's speech engine, not stored by us).</li>
+            <li><strong>App Activity — Notifications Sent:</strong> Whether news notification was delivered (stored locally only as a seen-link list in SharedPreferences; not shared with any server).</li>
         </ul>
-        
         <p><strong>Data Shared with Third Parties:</strong></p>
         <ul>
             <li>AdMob: Advertising ID, device information, app usage data.</li>
             <li>Firebase: Analytics data, crash reports, performance metrics.</li>
+            <li>Google News: IP address only (standard HTTPS RSS fetch via WorkManager for news notifications and home screen news feed).</li>
+            <li>Android Speech Recognition: Voice audio (when Voice Search is used, governed by Google's policy).</li>
         </ul>
-        
         <p><strong>Data Security Practices:</strong></p>
         <ul>
-            <li>Data is encrypted in transit using HTTPS/TLS.</li>
+            <li>Data is encrypted in transit using HTTPS/TLS for all external connections (including the WorkManager news RSS fetch).</li>
             <li>Data stored locally is protected by Android's app sandbox.</li>
-            <li>You can request data deletion through the app's "Clear Browser Data" feature.</li>
+            <li>You can request data deletion through the app's "Clear Browser Data" feature or by uninstalling the app.</li>
+            <li>We do not store personal user data on our own servers.</li>
         </ul>
-        
-        <p><strong>User Controls:</strong></p>
-        <ul>
-            <li>You can opt out of personalized ads from device settings.</li>
-            <li>You can clear all browsing data from the app.</li>
-            <li>You can revoke permissions at any time.</li>
-        </ul>
-        
-        <p><strong>Compliance Certifications:</strong></p>
-        <ul>
-            <li>We comply with Google Play's policies for user data handling.</li>
-            <li>We comply with Google's EU User Consent Policy for users in the EEA and UK.</li>
-            <li>We comply with COPPA requirements for children's privacy.</li>
-        </ul>
-        
         <p><strong>Permissions Justification:</strong></p>
-        <p>All permissions requested by Swift Go Browser are necessary for core browser functionality:</p>
         <ul>
-            <li>INTERNET: Required for browsing websites.</li>
-            <li>READ/WRITE_EXTERNAL_STORAGE: Required for downloading and saving files.</li>
-            <li>CAMERA: Required when websites request camera access.</li>
-            <li>MICROPHONE: Required when websites request audio input.</li>
-            <li>LOCATION: Required when websites request location data.</li>
-            <li>POST_NOTIFICATIONS: Required for showing download progress and completion notifications.</li>
-        </ul>
-        
-        <p><strong>No Deceptive Practices:</strong></p>
-        <ul>
-            <li>We do not collect data beyond what is disclosed in this policy.</li>
-            <li>We do not sell user data to third parties.</li>
-            <li>We do not use data for purposes other than those disclosed.</li>
-            <li>All data collection is transparent and disclosed to users.</li>
+            <li>INTERNET: Required for browsing websites, fetching news, downloading files, and WorkManager news RSS fetch.</li>
+            <li>READ/WRITE_EXTERNAL_STORAGE: Required for downloading and accessing files.</li>
+            <li>CAMERA: Required when websites request camera access for web apps.</li>
+            <li>RECORD_AUDIO / MICROPHONE: Required for websites that need audio input AND for the in-app Voice Search feature.</li>
+            <li>ACCESS_FINE/COARSE_LOCATION: Required when websites request location data (e.g., maps).</li>
+            <li>POST_NOTIFICATIONS: Required for showing download progress/completion and news notifications (opt-in, requested at runtime only if user navigates to Settings).</li>
+            <li>RECEIVE_BOOT_COMPLETED: Required so WorkManager can re-register the periodic news fetch task after the device restarts.</li>
+            <li>FOREGROUND_SERVICE: Required for WorkManager to run background tasks reliably on modern Android versions.</li>
+            <li>DOWNLOAD_WITHOUT_NOTIFICATION: Required for the download manager to function silently in the background.</li>
         </ul>
 
-        <h2>18. Legal Basis for Data Processing (GDPR)</h2>
-        <p>For users in the European Economic Area (EEA), United Kingdom, and Switzerland, we process your data based on the following legal grounds as required by the General Data Protection Regulation (GDPR):</p>
-        
-        <p><strong>Consent:</strong> We process certain data based on your explicit consent, including:</p>
-        <ul>
-            <li>Camera, microphone, and location permissions (you grant consent through Android permission dialogs).</li>
-            <li>Personalized advertising (you can withdraw consent by opting out in device settings).</li>
-        </ul>
-        
-        <p><strong>Contractual Necessity:</strong> We process data necessary to provide the browser service you've requested, including:</p>
-        <ul>
-            <li>Loading and displaying web pages (requires internet access).</li>
-            <li>Downloading files (requires storage access).</li>
-            <li>Managing tabs and navigation (requires storing session data).</li>
-        </ul>
-        
-        <p><strong>Legitimate Interests:</strong> We process certain data based on our legitimate interests, including:</p>
-        <ul>
-            <li>Analytics and crash reporting (to improve app quality and fix bugs).</li>
-            <li>Security monitoring (to protect against malicious activity).</li>
-            <li>Ad serving (to keep the app free for users).</li>
-        </ul>
-        
-        <p><strong>Legal Obligation:</strong> We may process data to comply with legal obligations, such as:</p>
-        <ul>
-            <li>Responding to valid legal requests from authorities.</li>
-            <li>Complying with tax and financial regulations.</li>
-        </ul>
-        
-        <p><strong>Right to Withdraw Consent:</strong> You can withdraw your consent at any time by revoking permissions, opting out of personalized ads, or uninstalling the app. Withdrawing consent does not affect the lawfulness of processing before withdrawal.</p>
-        
-        <p><strong>Data Retention:</strong> We retain data only as long as necessary for the purposes described in this policy. Since most data is stored locally on your device, you control retention through the app's data management features. Third-party services (AdMob, Firebase) retain data according to their own retention policies.</p>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>24. Legal Basis for Data Processing (GDPR)</h2>
+        <p>For users in the European Economic Area (EEA), United Kingdom, and Switzerland, we process your data based on the following legal grounds:</p>
+        <p><strong>Consent:</strong> Camera, microphone, and location permissions; personalized advertising; Voice Search audio processing; notification permission.</p>
+        <p><strong>Contractual Necessity:</strong> Loading and displaying web pages; downloading files; managing tabs and navigation; providing news feed content; delivering notification system functionality.</p>
+        <p><strong>Legitimate Interests:</strong> Analytics and crash reporting; ad serving; news feed; shortcuts and bookmarks; WorkManager background news fetch.</p>
+        <p><strong>Legal Obligation:</strong> We may process data to comply with valid legal requests from authorities.</p>
+        <p><strong>Data Retention:</strong> Since most data is stored locally on your device, you control retention through the app's data management features. Third-party services (AdMob, Firebase) retain data according to their own retention policies.</p>
 
-        <h2>19. Summary & Key Points</h2>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>25. Summary &amp; Key Points</h2>
         <div class="info-box">
             <p><strong>What We Collect:</strong></p>
             <ul>
-                <li>Browsing history, bookmarks, and download records (stored locally on your device).</li>
-                <li>App usage data and crash reports (collected by Firebase Analytics and Crashlytics).</li>
-                <li>Advertising data (collected by Google AdMob).</li>
+                <li>Browsing history, bookmarks, shortcuts, and download records (stored locally only).</li>
+                <li>App usage data and crash reports (Firebase Analytics &amp; Crashlytics).</li>
+                <li>Advertising data (Google AdMob).</li>
                 <li>Cookies and cache from websites you visit (stored locally).</li>
+                <li>Your search engine preference and app settings (stored locally).</li>
+                <li>A list of seen news article links to prevent duplicate notifications (stored locally in SharedPreferences).</li>
             </ul>
-            
             <p><strong>How We Use Data:</strong></p>
             <ul>
-                <li>To provide browser functionality (loading pages, managing tabs, downloads).</li>
+                <li>To provide full browser functionality (browsing, tabs, downloads, media playback, news, voice search, shortcuts, notifications).</li>
                 <li>To improve app quality and fix bugs (analytics and crash reports).</li>
                 <li>To display advertisements and keep the app free (AdMob).</li>
-                <li>To enhance your experience (remembering preferences, providing suggestions).</li>
+                <li>To send periodic Google News notifications in the background (WorkManager + flutter_local_notifications).</li>
+                <li>To enhance your experience (remembering preferences, shortcuts, bookmarks).</li>
             </ul>
-            
             <p><strong>Data Sharing:</strong></p>
             <ul>
                 <li>We do NOT sell or rent your data.</li>
-                <li>We share data with Google (AdMob, Firebase) as necessary for app functionality.</li>
+                <li>We share data with Google (AdMob, Firebase, News RSS, Favicon service) as necessary for app functionality.</li>
                 <li>Websites you visit may collect their own data according to their policies.</li>
+                <li>Android's speech recognition engine processes Voice Search audio.</li>
             </ul>
-            
             <p><strong>Your Control:</strong></p>
             <ul>
-                <li>All data is stored locally on your device.</li>
-                <li>You can delete all data anytime from the app.</li>
+                <li>All personal data is stored locally on your device.</li>
+                <li>You can delete all data anytime from the app or by uninstalling it.</li>
                 <li>You can revoke permissions anytime from device settings.</li>
                 <li>You can opt out of personalized ads.</li>
                 <li>You can use Incognito Mode for private browsing.</li>
+                <li>You can choose your preferred search engine.</li>
+                <li>You can disable all or individual notification channels independently.</li>
+                <li>You can disable news background notifications by turning off the News Notifications channel.</li>
             </ul>
-            
-            <p><strong>Security:</strong></p>
-            <ul>
-                <li>Data is protected by Android's app sandbox.</li>
-                <li>HTTPS connections are encrypted.</li>
-                <li>We don't store your data on remote servers.</li>
-            </ul>
-            
             <p><strong>Contact:</strong></p>
             <ul>
                 <li>Email: <a href="mailto:swiftgobrowser@gmail.com">swiftgobrowser@gmail.com</a></li>
-                <li>We respond to privacy inquiries within 7-14 days.</li>
+                <li>Developer: Mr Abhishek &amp; Team</li>
+                <li>Response time: 7–14 business days.</li>
             </ul>
         </div>
 
-        <div class="notice" style="margin-top: 40px;">
-            <p><strong>Thank you for using Swift Go Browser!</strong></p>
-            <p>We are committed to protecting your privacy and providing a secure, fast, and feature-rich browsing experience. If you have any questions or concerns about this Privacy Policy, please don't hesitate to contact us.</p>
-        </div>
-    </div>
-</body>
-</html>
+        <div class="notice" style="margin-top: 40px
