@@ -144,7 +144,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy – Swift Go Browser</h1>
-        <p class="last-updated">Last Updated: February 27, 2026</p>
+        <p class="last-updated">Last Updated: March 1, 2026</p>
 
         <div class="info-box">
             <p><strong>Display Name:</strong> Swift Go</p>
@@ -249,9 +249,9 @@
         <p><strong>Notification Permission (POST_NOTIFICATIONS):</strong> On Android 13+, this permission is NEVER
             automatically requested by our app. Notifications are only shown if you manually enable them from Android
             system settings. We respect your choice to keep notifications disabled.</p>
-        <p><strong>Phone Permission:</strong> Requested only when a website needs to make phone calls via a
-            <code>tel:</code> URI link. This is rare and only happens with specific web applications.
-        </p>
+        <p><strong>Phone Actions:</strong> When a website needs to make a phone call (via a <code>tel:</code> link), our 
+            browser securely passes the number to Android's default dialer using intents. We do <strong>NOT</strong> request or require 
+            the <code>CALL_PHONE</code> permission at any point.</p>
         <p>All permission requests include a clear explanation of why the permission is needed. You can deny any
             permission and the app will continue to work, though the specific feature requiring that permission may not
             function. You can review and change all permissions anytime from <em>Settings &gt; Apps &gt; Swift Go
@@ -324,8 +324,8 @@
             manager. Failed downloads show error notifications with options to retry. Downloaded files are stored in
             your device's standard Downloads folder (<code>/storage/emulated/0/Download/</code>) and are securely shared
             with other apps using Android's FileProvider system when you choose to open them.</p>
-        <p><strong>Permissions Used:</strong> READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE (Android ≤10),
-            DOWNLOAD_WITHOUT_NOTIFICATION, and INTERNET.</p>
+        <p><strong>Permissions Used:</strong> READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE (Only on older Android versions ≤ 12),
+            DOWNLOAD_WITHOUT_NOTIFICATION, and INTERNET. On modern Android 13+ devices, downloads are securely handled by Android's native systems without requiring invasive storage permissions.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
         <h2>8. Media Player (Video &amp; Audio Playback)</h2>
@@ -547,9 +547,10 @@
             data is stored locally and is <strong>NEVER</strong> transmitted to our servers or any third-party services
             (except as required by websites you visit).</p>
         <p><strong>Browsing History:</strong> The app maintains a record of websites you visit, including the page
-            title, URL, and timestamp. This history is stored locally using the <strong>Hive</strong> database and
+            title, URL, and timestamp. This history is stored locally using <strong>SharedPreferences</strong> and
             Provider state management. You can view, search, and delete individual entries or clear all history at once
             from the History screen.</p>
+
         <p><strong>Bookmarks:</strong> When you bookmark a webpage using the three-dot menu, we store the page title,
             URL, favicon URL, and the date you bookmarked it. Bookmarks are stored locally and persist across app
             sessions.</p>
