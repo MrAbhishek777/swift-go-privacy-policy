@@ -521,7 +521,7 @@
             queries, your keystrokes, or any data from this AutoComplete interaction.</p>
         <p><strong>Privacy:</strong> Your search queries are sent directly to your chosen search engine's servers, and
             their respective privacy policies govern data handling. Swift Go Browser does NOT intercept, log, or analyze
-            your search queries. Your search engine preference is stored locally on your device using SharedPreferences
+            your search queries. Your search engine preference is stored locally on your device using Hive database
             and is never transmitted to our servers.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
@@ -534,7 +534,7 @@
             icon tiles with the website's favicon and title. You can rearrange shortcuts by long-pressing and dragging.
             Shortcuts can be deleted individually by long-pressing and selecting delete.</p>
         <p><strong>Privacy:</strong> Shortcut data (website title and URL) is stored locally on your device using
-            <strong>SharedPreferences</strong>. This data is only present on your device and is never transmitted to our
+            <strong>Hive database</strong>. This data is only present on your device and is never transmitted to our
             servers. The website favicon displayed in shortcuts is loaded from Google's public favicon service
             (<code>google.com/s2/favicons</code>) when displaying a shortcut, which involves a network request to
             Google's servers with the domain name of the website. No personal data beyond the domain name is sent in
@@ -547,7 +547,7 @@
             data is stored locally and is <strong>NEVER</strong> transmitted to our servers or any third-party services
             (except as required by websites you visit).</p>
         <p><strong>Browsing History:</strong> The app maintains a record of websites you visit, including the page
-            title, URL, and timestamp. This history is stored locally using <strong>SharedPreferences</strong> and
+            title, URL, and timestamp. This history is stored locally using <strong>Hive database</strong> and
             Provider state management. You can view, search, and delete individual entries or clear all history at once
             from the History screen.</p>
 
@@ -561,7 +561,7 @@
         <p><strong>Cache:</strong> The browser caches website resources (images, scripts, stylesheets) to speed up page
             loading on repeat visits. You can clear the cache anytime from "Clear Browser Data."</p>
         <p><strong>App Preferences &amp; Language System:</strong> We store your app settings using
-            <strong>SharedPreferences</strong>, including your selected search engine, dark/light mode preference,
+            <strong>Hive database</strong>, including your selected search engine, dark/light mode preference,
             onboarding completion status, home screen shortcuts, notification preferences, and your selected app
             language.
             Swift Go Browser features a multi-language system that adapts to your device's language settings or your
@@ -617,7 +617,7 @@
         <p><strong>WebView Dark Mode:</strong> The browser also applies a CSS-based dark filter to web pages when Dark
             Mode is enabled, reducing the brightness and adjusting colors of websites that do not natively support dark
             mode. This is done entirely on-device using CSS injection (no network requests).</p>
-        <p><strong>Privacy:</strong> Your theme preference (dark or light) is stored locally in SharedPreferences on
+        <p><strong>Privacy:</strong> Your theme preference (dark or light) is stored locally in Hive database on
             your device and is never transmitted to our servers.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
@@ -671,7 +671,7 @@
         <ul>
             <li>The app is built using Flutter and open-source packages including
                 <code>flutter_local_notifications</code>, <code>workmanager</code>, <code>flutter_inappwebview</code>,
-                <code>flutter_downloader</code>, and <code>shared_preferences</code>. These packages do not
+                <code>flutter_downloader</code>, and <code>hive</code>. These packages do not
                 independently collect user data.
             </li>
             <li>Privacy Policy: <a href="https://flutter.dev/privacy" target="_blank">https://flutter.dev/privacy</a>
@@ -778,7 +778,7 @@
             <li><strong>Audio (temporary):</strong> Voice input when you use Voice Search (processed by Android's speech
                 engine, not stored by us).</li>
             <li><strong>App Activity — Notifications Sent:</strong> Whether news notification was delivered (stored
-                locally only as a seen-link list in SharedPreferences; not shared with any server).</li>
+                locally only as a seen-link list in Hive Database; not shared with any server).</li>
         </ul>
         <p><strong>Data Shared with Third Parties:</strong></p>
         <ul>
@@ -844,7 +844,7 @@
                 <li>Your search engine preference, app settings, and language localization preferences (stored locally).
                 </li>
                 <li>A list of seen news article links to prevent duplicate notifications (stored locally in
-                    SharedPreferences).</li>
+                    Hive Database).</li>
             </ul>
             <p><strong>How We Use Data:</strong></p>
             <ul>
