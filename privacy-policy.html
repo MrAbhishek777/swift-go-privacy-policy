@@ -144,7 +144,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy – Swift Go Browser</h1>
-        <p class="last-updated">Last Updated: March 10, 2026</p>
+        <p class="last-updated">Last Updated: April 12, 2026</p>
 
         <div class="info-box">
             <p><strong>Display Name:</strong> Swift Go</p>
@@ -174,7 +174,7 @@
             detecting whether you have entered a website address or a search term using our Chrome-like smart URL
             detection system. The browser maintains a navigation history for each tab, enabling you to go back and
             forward through previously visited pages.</p>
-        <p><strong>Saved Tabs & Navigation Behavior:</strong> Swift Go Browser maintains the last visited page state for each open or saved tab. If you navigate to the last page within a tab and accidentally press the device's back button, The WebView will reload or remain on the last page instead of automatically returning to the home screen. This prevents accidental exits from active browsing sessions. To return to the home screen from a saved or active tab, you must explicitly use the in-app Home button. The browser does not automatically redirect users to the home screen when navigating back from the last page of a tab.</p>
+        <p><strong>Saved Tabs & Navigation Behavior:</strong> Swift Go Browser maintains the navigation state for each active or saved tab. When you navigate through your history and reach the beginning of the tab's history (the last available page), the browser will automatically return you to the home screen for a seamless and intuitive navigation experience. To return to the home screen manually at any time, you can also use the in-app Home button.</p>
         <p>We support both HTTP and HTTPS protocols with visual security indicators. The browser can handle forms,
             cookies, local storage, and multimedia content. We also support <strong>deep linking</strong>, allowing you
             to open web links from other applications directly in Swift Go Browser. The browser is optimized for
@@ -333,8 +333,8 @@
             files directly within the app, so you do not need a separate media application. The video player supports
             popular formats including MP4, MOV, AVI, MKV, FLV, WMV, WebM, 3GP, and M4V. The audio player supports MP3,
             AAC, WAV, OGG, and other common audio formats.</p>
-        <p><strong>Video Player Features:</strong> The built-in video player provides play/pause controls, a seekbar for
-            precise navigation, a 10-second forward/backward double-tap gesture, a fullscreen/portrait orientation
+        <p><strong>Media Player Features:</strong> The built-in video player provides play/pause controls, a seekbar for
+            precise navigation, dedicated 10-second forward and backward control buttons for easy seeking, a fullscreen/portrait orientation
             toggle, a screen lock feature to prevent accidental touches during playback, and an option to open the file
             with an external player if the format is not natively supported.</p>
         <p><strong>Audio Player Features:</strong> The audio player provides full playback controls (play, pause, seek,
@@ -387,7 +387,7 @@
         <!-- ═══════════════════════════════════════════════════════════ -->
         <h2>11. News Feed System</h2>
         <p>Swift Go Browser includes a built-in <strong>News Feed</strong> that displays trending news articles directly
-            on your home screen. The news feed is powered by <strong>Google News RSS</strong>, supporting multiple regions including **India, USA, UK, and Global editions**. You can select your preferred news region and language directly from the browser settings.
+            on your home screen. The news feed is powered by <strong>Google News RSS</strong>, supporting 35+ specific regional editions and languages. You can select your preferred news region and language directly from the browser settings to match your location and preference.
         </p>
         <p><strong>How the News Feed Works:</strong> When you open the home screen, the app fetches the latest news
             headlines from Google News RSS. The feed is parsed locally on your device. Article titles, links, source
@@ -459,8 +459,7 @@
                 on your device.</li>
             <li>We compare the fetched article links against a locally stored list of "already seen" articles to avoid
                 showing duplicate notifications.</li>
-            <li>We display notifications only for articles that are genuinely new, showing up to 3 notifications per
-                15-minute cycle to avoid notification spam.</li>
+            <li>We display notifications only for articles that are genuinely new, showing the most relevant trending notification per 15-minute cycle to keep your notification tray clean and organized.</li>
             <li>The article link is marked as seen in local storage so the same article never generates a duplicate
                 notification.</li>
             <li>Tapping a news notification opens Swift Go Browser and navigates directly to the full article URL.</li>
@@ -501,7 +500,7 @@
         <h2>13. Search Engine &amp; Smart URL System</h2>
         <p>Swift Go Browser allows you to choose your preferred <strong>search engine</strong> for all web searches
             performed from the address bar or voice search. The following search engines are supported: <strong>Google,
-                DuckDuckGo, Bing, Yahoo, and Yandex</strong>. You can change your preferred search engine at any time
+                DuckDuckGo, Bing, and Yahoo</strong>. You can change your preferred search engine at any time
             from <em>Settings &gt; Search Engine</em>.</p>
         <p><strong>How It Works:</strong> When you type a query in the address bar, our smart URL detection system
             determines whether you have typed a URL (domain, IP, or link with a scheme like <code>http://</code>) or a
@@ -514,8 +513,9 @@
         <p><strong>Search Suggestions:</strong> As you type search queries in the address bar, your keystrokes may be
             sent to Google's AutoComplete API (<code>suggestqueries.google.com</code>) to display real-time predictive
             text and search suggestions. This service only temporarily receives your partial typing to return
-            suggestions.
-            The developer of Swift Go Browser does <strong>NOT</strong> collect, store, log, or track your search
+            suggestions.</p>
+        <p><strong>Note:</strong> Search suggestions are currently fetched from the remote API only for maximum privacy and performance, and do not include or scan your local search history entries.</p>
+        <p>The developer of Swift Go Browser does <strong>NOT</strong> collect, store, log, or track your search
             queries, your keystrokes, or any data from this AutoComplete interaction.</p>
         <p><strong>Privacy:</strong> Your search queries are sent directly to your chosen search engine's servers, and
             their respective privacy policies govern data handling. Swift Go Browser does NOT intercept, log, or analyze
@@ -523,7 +523,12 @@
             and is never transmitted to our servers.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>14. Home Screen Shortcuts System</h2>
+        <h2>14. AI Tools Library</h2>
+        <p>Swift Go Browser includes a curated <strong>AI Tools Library</strong> providing quick access to over 30+ popular AI services and tools (such as ChatGPT, Google Gemini, Adobe Firefly, Claude, and more). These tools are categorized for easy discovery (Coding, Design, Research, etc.) and open directly in the browser WebView.</p>
+        <p><strong>Privacy:</strong> When you use an AI tool, your interaction is directly with that specific AI service provider's website. Swift Go Browser does NOT intercept, store, or analyze your prompts, queries, or the generated results. Your use of these AI tools is governed by each respective provider's privacy policy and terms of service. We do not transmit any profile data to these providers; they only receive your standard network request context as with any other website you visit.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>15. Home Screen Shortcuts System</h2>
         <p>Swift Go Browser includes a <strong>Home Screen Shortcuts</strong> feature that allows you to save frequently
             visited websites as quick-access shortcut tiles directly on the app's home screen. This provides faster
             navigation to your favorite sites without needing to type URLs repeatedly.</p>
@@ -540,7 +545,7 @@
         </p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>15. Data Storage (Bookmarks, History, Cache &amp; Cookies)</h2>
+        <h2>16. Data Storage (Bookmarks, History, Cache &amp; Cookies)</h2>
         <p>Swift Go Browser stores various types of data locally on your device to enhance your browsing experience. All
             data is stored locally and is <strong>NEVER</strong> transmitted to our servers or any third-party services
             (except as required by websites you visit).</p>
@@ -578,7 +583,7 @@
             Browser, all stored data is automatically deleted.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>16. Incognito Mode (Private Browsing)</h2>
+        <h2>17. Incognito Mode (Private Browsing)</h2>
         <p>Swift Go Browser includes an <strong>Incognito Mode</strong> that provides enhanced privacy for your browsing
             sessions. You can open an Incognito tab from the three-dot menu item "New Incognito Tab." Incognito tabs are
             visually distinguished from normal tabs.</p>
@@ -606,7 +611,7 @@
         </ul>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>17. Dark Mode &amp; Theme System</h2>
+        <h2>18. Dark Mode &amp; Theme System</h2>
         <p>Swift Go Browser includes a <strong>Dark Mode</strong> (also called Night Mode) and a <strong>Light
                 Mode</strong> theme system that adjusts the app's color scheme for comfortable viewing in different
             lighting conditions. You can switch between these themes from the Settings screen.</p>
@@ -619,7 +624,7 @@
             your device and is never transmitted to our servers.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>18. Third-Party Services &amp; Data Sharing</h2>
+        <h2>19. Third-Party Services &amp; Data Sharing</h2>
         <p>Swift Go Browser integrates several third-party services to provide essential functionality. These services
             may collect and process certain data according to their own privacy policies.</p>
         <p><strong>Google AdMob (Advertising):</strong></p>
@@ -681,7 +686,7 @@
             legal process.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>19. Children's Privacy (COPPA Compliance)</h2>
+        <h2>20. Children's Privacy (COPPA Compliance)</h2>
         <p>Swift Go Browser is a general-purpose web browser and is not specifically designed for or directed at
             children under the age of 13. We do not knowingly collect personal information from children under 13 years
             of age. If you are a parent or guardian and you believe your child has provided personal information through
@@ -690,7 +695,7 @@
             to comply with COPPA and Google's policies regarding child-directed content.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>20. Data Security &amp; Protection</h2>
+        <h2>21. Data Security &amp; Protection</h2>
         <p>We take the security of your data seriously and implement appropriate technical and organizational measures
             to protect your information from unauthorized access, alteration, disclosure, or destruction.</p>
         <p><strong>Local Storage Security:</strong> All data stored by Swift Go Browser is stored in the app's private
@@ -707,7 +712,7 @@
             dependencies. We recommend keeping Swift Go Browser updated to the latest version.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>21. Your Privacy Rights &amp; Choices</h2>
+        <h2>22. Your Privacy Rights &amp; Choices</h2>
         <p>You have complete control over your data and privacy when using Swift Go Browser.</p>
         <p><strong>Right to Delete:</strong></p>
         <ul>
@@ -726,21 +731,21 @@
             Website, News) from <em>Settings &gt; Apps &gt; Swift Go Browser &gt; Notifications</em>.</p>
         <p><strong>Right to Use Incognito Mode:</strong> Browse privately using Incognito Mode to prevent local storage
             of history, cookies, and cache for that session.</p>
-        <p><strong>Right to Choose Your Search Engine:</strong> Choose from Google, DuckDuckGo, Bing, Yahoo, or Yandex
+        <p><strong>Right to Choose Your Search Engine:</strong> Choose from Google, DuckDuckGo, Bing, or Yahoo
             at <em>Settings &gt; Search Engine</em>.</p>
         <p><strong>California Privacy Rights (CCPA):</strong> We do NOT sell personal information.</p>
         <p><strong>European Privacy Rights (GDPR):</strong> Since we do not store personal data on our servers, most
             GDPR requests can be fulfilled using the app's built-in data management features.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>22. Changes to This Privacy Policy</h2>
+        <h2>23. Changes to This Privacy Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect changes in our practices, app features, or
             legal requirements. When we make changes, we will update the "Last Updated" date at the top of this policy.
             Your continued use of Swift Go Browser after any changes constitutes your acceptance of the updated policy.
         </p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>23. Contact Us</h2>
+        <h2>24. Contact Us</h2>
         <div class="contact-info">
             <p>If you have any questions, concerns, or requests regarding this Privacy Policy, your data, or our privacy
                 practices, please contact us.</p>
@@ -751,7 +756,7 @@
         </div>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>24. Terms and Conditions</h2>
+        <h2>25. Terms and Conditions</h2>
         <div class="info-box">
             <p>In addition to this Privacy Policy, your use of Swift Go Browser is also governed by our Terms and Conditions.</p>
             <div class="notice">
@@ -761,7 +766,7 @@
         </div>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>25. Google Play Store Compliance</h2>
+        <h2>26. Google Play Store Compliance</h2>
         <p>This section addresses specific requirements for Google Play Store compliance and provides additional
             transparency about our app's data handling practices.</p>
         <p><strong>Data Collected by the App:</strong></p>
@@ -813,7 +818,7 @@
         </ul>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>26. Legal Basis for Data Processing (GDPR)</h2>
+        <h2>27. Legal Basis for Data Processing (GDPR)</h2>
         <p>For users in the European Economic Area (EEA), United Kingdom, and Switzerland, we process your data based on
             the following legal grounds:</p>
         <p><strong>Consent:</strong> Camera, microphone, and location permissions; personalized advertising; Voice
@@ -829,7 +834,7 @@
             their own retention policies.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>27. Summary &amp; Key Points</h2>
+        <h2>28. Summary &amp; Key Points</h2>
         <div class="info-box">
             <p><strong>What We Collect:</strong></p>
             <ul>
