@@ -144,7 +144,7 @@
 <body>
     <div class="container">
         <h1>Privacy Policy – Swift Go Browser</h1>
-        <p class="last-updated">Last Updated: April 12, 2026</p>
+        <p class="last-updated">Last Updated: May 23, 2026</p>
 
         <div class="info-box">
             <p><strong>Display Name:</strong> Swift Go</p>
@@ -302,7 +302,7 @@
             collected and processed by Google according to their privacy policy. You can opt out of personalized ads by
             adjusting your device's ad settings (<em>Settings &gt; Google &gt; Ads &gt; Opt out of Ads
                 Personalization</em>). Even if you opt out, you will still see non-personalized ads.</p>
-        <p><strong>Ad Unit IDs:</strong> We use three specific ad units: App Open Ad
+        <p><strong>Ad Unit IDs:</strong> We use four specific ad units: First Open Interstitial Ad (<code>ca-app-pub-8523933423167815/9532383421</code>), App Open Ad
             (<code>ca-app-pub-8523933423167815/3079064528</code>), Download Complete Ad
             (<code>ca-app-pub-8523933423167815/4616331883</code>), and Clear Tabs Ad
             (<code>ca-app-pub-8523933423167815/9452901184</code>). These comply with Google's advertising policies.</p>
@@ -550,7 +550,7 @@
             data is stored locally and is <strong>NEVER</strong> transmitted to our servers or any third-party services
             (except as required by websites you visit).</p>
         <p><strong>Browsing History:</strong> The app maintains a record of websites you visit, including the page
-            title, URL, and timestamp. This history is stored locally using <strong>Hive database</strong> and
+            title, URL, and timestamp. This history is stored locally using <strong>Hive database</strong>, <strong>sqflite</strong>, and
             Provider state management. You can view, search, and delete individual entries or clear all history at once
             from the History screen.</p>
 
@@ -834,7 +834,22 @@
             their own retention policies.</p>
 
         <!-- ═══════════════════════════════════════════════════════════ -->
-        <h2>28. Summary &amp; Key Points</h2>
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>28. Analytics &amp; Crash Reporting (Firebase)</h2>
+        <p>Swift Go Browser uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong> to improve app performance and stability. These services collect anonymous diagnostic data such as crash reports, app launch events, and device models. This data helps our development team identify bugs and improve the overall app experience. No personal identifying information (such as names, emails, or browsing history) is sent to Firebase. This data processing is essential for maintaining a stable app and is governed by Google's privacy policy.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>29. Built-in Ad Blocker System</h2>
+        <p>Our browser includes a robust, on-device <strong>Ad Blocker System</strong> designed to enhance your browsing experience by removing intrusive advertisements from web pages. The ad blocker functions entirely offline by injecting custom JavaScript into the webpage before it renders. It blocks known ad networks, trackers, pop-ups, and cosmetic ad elements using locally stored blocklists.</p>
+        <p><strong>Privacy of Ad Blocking:</strong> The ad blocking process occurs strictly on your device. We do NOT track which ads were blocked, we do NOT send telemetry about the websites you visit to any ad-blocking server, and your browsing data never leaves your device during the ad-blocking process.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>30. App Version Update Check</h2>
+        <p>To ensure you always have the latest security patches and features, Swift Go Browser periodically checks for updates using the <strong>new_version_plus</strong> package. This feature securely pings the Google Play Store in the background to verify if a newer version of the app is available. If an update is found, you may see a prompt suggesting you update the app.</p>
+        <p><strong>Privacy:</strong> This update check involves a standard API request to the Google Play Store servers. It does not transmit any of your personal data or browsing history; it only checks the current version code of the app against the latest published version.</p>
+
+        <!-- ═══════════════════════════════════════════════════════════ -->
+        <h2>31. Summary &amp; Key Points</h2>
         <div class="info-box">
             <p><strong>What We Collect:</strong></p>
             <ul>
